@@ -86,7 +86,7 @@ class LogNormal():
         """
         m = parameters[0]
         
-        px = exp(- (log(bas) - m)**2 / 2 * sigma2) / (bas * sqrt(2 * pi * sigma2 ))
+        px = exp(- (log(bas) - m)**2 / 2 / sigma2) / (bas * sqrt(2 * pi * sigma2 ))
         
         lls = log(px)
         if individual:

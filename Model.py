@@ -213,7 +213,6 @@ class ARCHModel():
             vp, bas, sigma2, backcast, var_bounds
         )
         # 3. Compute log likelihood using Distribution
-        print(sigma2)
         llf = self.distribution.loglikelihood(mp, bas, sigma2, individual)
         if not individual:
             _callback_info["llf"] = llf_f = -float(llf)
