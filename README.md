@@ -1,5 +1,5 @@
 # Garch-Log-Normal-Distribution
-This project builds a Garch model with two sigmas (one follows LogNormal).
+This project builds a Garch model(one follows LogNormal).
 
 You can copy this folder into your Jupyter notebook. Then you can create a new ipynb file, and import functions as the following:
 
