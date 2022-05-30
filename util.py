@@ -79,6 +79,7 @@ def garch_recursion(
         nobs by 2-element array of upper and lower bounds for conditional
         transformed variances for each time period
     """
+    print(bas)
     for t in range(nobs):
         loc = 0
         sigma2[t] = parameters[loc]
@@ -87,7 +88,7 @@ def garch_recursion(
             if (t - 1 - j) < 0:
                 sigma2[t] += parameters[loc] * backcast
             else:
-                sigma2[t] += parameters[loc] * bas[t - 1 - j]
+                sigma2[t] += parameters[loc] * bas[t - 1 - j]**2
             loc += 1
         for j in range(q):
             if (t - 1 - j) < 0:
